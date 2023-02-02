@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Preview
+![ss1](./public/ss1.png)
+![ss2](./public/ss2.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
