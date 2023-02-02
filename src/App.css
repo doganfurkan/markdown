@@ -1,38 +1,189 @@
-.App {
+#header {
   text-align: center;
+  padding: 1.5em 1em;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header button {
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 1.25rem);
+  height: 2.5rem;
+  aspect-ratio: 1;
+  border: 0;
+  font-size: 1.25rem;
+  color: inherit;
+  background: bisque;
+  box-shadow: 0.75rem 0.75rem #555;
+  font-weight: 800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#header button:active{
+  box-shadow: 0.25rem 0.25rem #555;
+  top:calc(50% - 0.75rem);
+  right:.5rem
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1em;
+  gap: 2em;
+  margin-bottom:.75rem
 }
 
-.App-link {
-  color: #61dafb;
+#content > div {
+  width: calc(50% - 1em);
+  aspect-ratio: 1;
+  background-color: #ffdd67;
+  box-shadow: 0.75em 0.75em #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#content textarea#enter {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 0;
+  vertical-align: top;
+  background: transparent;
+  padding: 1rem;
+  font-size: 1em;
+}
+
+#res {
+  padding: 1em;
+}
+
+#res code {
+  padding: 0.5em 0.5em 0.5em 2.5em;
+  background: rgb(8, 56, 91);
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  color: #fff;
+  border-radius: 0.2em;
+  line-height: 1.5;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  position: relative;
+  color:#fff;
+}
+
+#res code::before{
+  content:attr(data-line);
+  width:1.5em;
+  background: #fff3;
+  height: calc(100% - 1em);
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+  text-align: right;
+  padding:0.5em 0.2em;
+  white-space:pre-wrap;
+}
+
+#res pre code{
+  white-space: pre;
+}
+
+#res blockquote {
+  display: block;
+  padding: 0 2em;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+#res li {
+  list-style-position: inside;
+}
+
+#res ul li{
+  padding-left:.2em;
+}
+
+#res ul li::before {
+  content: "\a0";
+  display: inline-block;
+  width: 0;
+  margin-right: -0.6em;
+}
+
+#res hr{
+  margin:.5em 0;
+  color:gray;
+  background-color:gray;
+  height: 1px;
+  border-width:0
+}
+
+#res table,#res th,#res td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size:1rem;  
+}
+
+#res td,#res th{
+  padding:.5rem
+}
+
+footer{
+  text-align: center;
+  padding:1em
+}
+
+.hljs-name{
+  color:red !important
+}
+
+.hljs-attr{
+  color:yellow !important
+}
+
+.hljs-string{
+  color:limegreen !important
+}
+
+.hljs-number{
+  color:#fff !important
+}
+
+.hljs-selector-tag{
+  color:rgb(133, 27, 255) !important
+}
+
+.hljs-attribute{
+  color: rgb(27, 179, 255) !important
+}
+
+.hljs-title {
+  color:rgb(196, 21, 21) !important
+}
+
+.hljs-comment{
+  color:#999 !important
+}
+
+.hljs-literal{
+  color: turquoise !important
+}
+
+@media screen and (max-width: 750px) {
+  #content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  #content>div{
+    width:100%
+  }
+
+  #header {
+    text-align: left;
   }
 }
