@@ -13,7 +13,7 @@ export default function Result() {
     for(let i = 0;i < document.getElementsByTagName("code").length;i++){
       let value = "";
       let lines = document.getElementsByTagName("code")[i].innerHTML.split(/\r\n|\r|\n/).length;
-      if(lines == 1){
+      if(lines === 1){
         value = "1"
       }else{
         for(let z = 1;z < lines;z++){
